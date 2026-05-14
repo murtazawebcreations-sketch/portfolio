@@ -92,33 +92,12 @@
   color: #1f242d;
   box-shadow: 0 0 10px #0ef;
 }
-.btn{
-  margin-top: 30px;
-}
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #0ef;
-  border-radius: 16px;
-  box-shadow: 0 0 10px #0ef;
-  font-size: 16px;
-  color: #1f242d;
-  letter-spacing: 1px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
 
-.btn:hover {
-  background-color: transparent;
-  border: 1px solid #0ef;
-  border-radius: 8px;
-  color: #fff;
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-  font-weight: 500;
+.home-content .btn {
+  margin-top: 25px;
+  display: block;
+  width: fit-content;
 }
-
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -171,9 +150,4 @@
     flex-wrap: wrap;
     gap: 10px;
 }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
 }

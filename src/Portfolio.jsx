@@ -85,7 +85,7 @@ const Portfolio = () => {
           <div className="portfolio-box" key={index}>
             <div className="portfolio-image">
               <img src={project.image} alt={project.title} />
-              <a href={project.link} className="portfolio-hover-button" target="_blank" rel="noopener noreferrer">Visit Site</a>
+              <a href={project.link} className="visit-btn" target="_blank" rel="noopener noreferrer">Visit Site</a>
             </div>
             <div className="portfolio-info">
               <h3 className="portfolio-title">{project.title}</h3>
@@ -98,7 +98,7 @@ const Portfolio = () => {
       <section className="cta-section fade-in">
         <h2>Ready to start your project?</h2>
         <p>Let’s work together to build something amazing!</p>
-        <NavLink to="/contact" className="cta-btn">Contact Me</NavLink>
+        <NavLink to="/contact" className="btn">Contact Me</NavLink>
       </section>
       
     </section>

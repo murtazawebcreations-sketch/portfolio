@@ -23,7 +23,7 @@ const Header = () => {
         </nav>
 
         <div className="hire-button-wrapper">
-          <NavLink to="/contact" className="hire-button">Hire Me</NavLink>
+          <NavLink to="/contact" className="btn">Hire Me</NavLink>
         </div>
 
         <div className="menu-icon" onClick={toggleFlyout}>

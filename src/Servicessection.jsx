@@ -56,7 +56,7 @@ export default function Servicessection() {
         ))}
       </div>
       <div className="explore-services-wrapper">
-        <Link to="/services" className="explore-services-button">
+        <Link to="/services" className="btn">
           Explore Services
         </Link>
       </div>

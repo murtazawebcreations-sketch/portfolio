@@ -135,26 +135,6 @@
   border: 1px solid #0ef;
 }
 
-.contact-form button {
-  padding: 14px;
-  background: #0ef;
-  border: none;
-  border-radius: 8px;
-  color: #000;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: transparent;
-  border: 1px solid #0ef;
-  border-radius: 8px;
-  color: #fff;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
 /* ===== REVEAL ANIMATION ===== */
 .reveal {
   opacity: 0;

@@ -22,7 +22,7 @@ export default function AboutSection() {
         <div className="about-details">
           <h3 className="about-title">Designing Experiences, Building Solutions</h3>
           <p className="about-description italic">
-            I’m a passionate WordPress, Shopify, and React Developer with over 2 years of experience building clean, fast, and user-centric websites. Currently in my 8th semester of BS Computer Science at Lahore Leads University, I specialize in custom WordPress themes, WooCommerce stores, Shopify storefronts, and interactive React interfaces. I’m highly skilled in HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, Elementor, and front-end frameworks like ReactJS.
+            I'm a passionate WordPress, Shopify, and React Developer with over 2 years of experience building clean, fast, and user-centric websites. I have completed my BS Computer Science from Lahore Leads University, where I specialized in custom WordPress themes, WooCommerce stores, Shopify storefronts, and interactive React interfaces. I'm highly skilled in HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, Elementor, and front-end frameworks like ReactJS.
           </p>
 
           <div className="info-grid">

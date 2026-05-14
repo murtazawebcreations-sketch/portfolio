@@ -54,30 +54,6 @@
   color: #0ef;
 }
 
-.hire-button-wrapper {
-  flex-shrink: 0;
-}
-
-.hire-button {
-  background: #0ef;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.3s;
-}
-
-.hire-button:hover {
-  background-color: transparent;
-  border: 1px solid #0ef;
-  border-radius: 8px;
-  color: #fff;
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-  
-}
-
 .menu-icon {
   font-size: 2rem;
   color: #0ef;
@@ -121,8 +97,7 @@
 
 /* Responsive behavior */
 @media (max-width: 1024px) {
-  .desktop-nav,
-  .hire-button-wrapper {
+  .desktop-nav {
     display: none;
   }
 

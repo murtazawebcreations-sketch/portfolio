@@ -177,7 +177,7 @@ const Contact = () => {
             rows="5"
           ></textarea>
 
-          <button type="submit">Send Message</button>
+          <button type="submit" className="btn">Send Message</button>
         </form>
 
       </section>

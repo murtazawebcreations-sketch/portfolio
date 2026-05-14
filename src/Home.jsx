@@ -69,7 +69,7 @@ const Home = () => {
       <section className="cta-section fade-in">
         <h2>Ready to start your project?</h2>
         <p>Let’s work together to build something amazing!</p>
-        <a href="/contact" className="cta-btn">Contact Me</a>
+        <a href="/contact" className="btn">Contact Me</a>
       </section>
    
 

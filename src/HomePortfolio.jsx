@@ -48,7 +48,7 @@ export default function HomePortfolio() {
             <div className="home-portfolio-item" key={index}>
               <div className="portfolio-img-wrapper">
                 <img src={encodeURI(item.image)} alt={item.title} />
-                <a className="visit-site-button" href={item.link} target="_blank" rel="noopener noreferrer">
+                <a className="btn" href={item.link} target="_blank" rel="noopener noreferrer">
                 Visit Site
               </a>
             </div>
@@ -60,7 +60,7 @@ export default function HomePortfolio() {
       </div>
 
       <div className="explore-portfolio-wrapper">
-        <Link to="/portfolio" className="explore-portfolio-button">
+        <Link to="/portfolio" className="btn">
           Explore Portfolio
         </Link>
       </div>

@@ -83,23 +83,18 @@
   transform: scale(1.05);
 }
 
-.visit-site-button {
+.home-portfolio-item .btn {
   position: absolute;
   bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 8px 16px;
-  background: #0ef;
-  color: #000;
-  font-size: 14px;
-  font-weight: 400;
-  border-radius: 6px;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  text-decoration: none; /* removes underline */
+  background-color: #0ef;
+  color: black;
 }
 
-.home-portfolio-item:hover .visit-site-button {
+.home-portfolio-item:hover .btn {
   opacity: 1;
   transform: translateX(-50%) translateY(-10px);
 }
@@ -119,24 +114,6 @@
 
 .explore-portfolio-wrapper {
   margin-top: 40px;
-}
-
-.explore-portfolio-button {
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 500;
-  border: 2px solid #0ef;
-  background: #0ef;
-  color: rgb(0, 0, 0);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.explore-portfolio-button:hover {
-  background: transparent;
-  color: #fff;
-  box-shadow: 0 0 6px #0ef;
 }
 
 /* Animations */

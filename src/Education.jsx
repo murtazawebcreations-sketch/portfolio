@@ -59,10 +59,10 @@ export default function Education() {
             description: `Intermediate in Computer Science (ICS) – Studied programming, mathematics, and computer applications, enhancing analytical and technical skills.`
           }, {
             id: 5,
-            years: "2022 - Present",
+            years: "2022 - 2026",
             title: "BS Computer Science",
             institution: "Lahore Leads University",
-            description: `BS Computer Science (8th Semester) – Expanding expertise in algorithms, web development, software engineering, and more.`
+            description: `BS Computer Science (Completed) – Graduated with comprehensive expertise in algorithms, web development, software engineering, databases, and modern development practices.`
           }].map((item) => (
             <div key={item.id} className="resume-item">
               <div className="badge">{item.id}</div>

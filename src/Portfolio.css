@@ -92,25 +92,24 @@
   transform: scale(1.05);
 }
 
-.portfolio-hover-button {
+.portfolio-box .visit-btn {
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px 20px;
-  background: #0ef;
-  color: #000;
-  font-size: 14px;
-  border-radius: 8px;
-  text-decoration: none;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 2;
+  background: #0ef !important;
+  color: #000 !important;
+  border: 2px solid #0ef !important;
 }
 
-.portfolio-box:hover .portfolio-hover-button {
+.portfolio-box:hover .visit-btn {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.1);
+  background: #000 !important;
+  color: #0ef !important;
 }
 
 .portfolio-info {
