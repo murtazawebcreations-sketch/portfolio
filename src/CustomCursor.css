@@ -17,7 +17,7 @@ body {
     height 0.3s ease,
     background 0.3s ease,
     border 0.3s ease;
-  z-index: 9999;
+  z-index: 100001;
   box-shadow: 0 0 15px #0efaa0;
 }
 
@@ -30,7 +30,7 @@ body {
   position: fixed;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: 100001;
 }
 
 /* Grow effect */

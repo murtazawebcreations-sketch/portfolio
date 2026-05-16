@@ -1,16 +1,24 @@
 // Header.jsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [flyoutOpen, setFlyoutOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleFlyout = () => setFlyoutOpen(!flyoutOpen);
   const closeFlyout = () => setFlyoutOpen(false);
 
   return (
-    <header className="main-header">
+    <header className={`main-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-inner">
         <div className="logo"><img src="Murtazalogo.png" alt="" width="200px" /></div>
 
@@ -38,6 +46,7 @@ const Header = () => {
         <NavLink to="/services" onClick={closeFlyout}>Services</NavLink>
         <NavLink to="/portfolio" onClick={closeFlyout}>Portfolio</NavLink>
         <NavLink to="/contact" onClick={closeFlyout}>Contact</NavLink>
+        <NavLink to="/contact" className="flyout-hire-btn" onClick={closeFlyout}>Hire Me</NavLink>
       </div>
     </header>
   );
