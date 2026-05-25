@@ -1,6 +1,7 @@
 import React from 'react';
 import './Portfolio.css';
 import { NavLink } from 'react-router-dom';
+import CTA from './CTA.jsx';
 
 const projects = [
   {
@@ -72,7 +73,7 @@ const Portfolio = () => {
         <div className="banner-content fade-in">
           <h1>Portfolio</h1>
           <nav className="breadcrumb">
-            <a href="/">Home</a> <span>/</span> <span>Portfolio</span>
+            <NavLink to="/">Home</NavLink> <span>/</span> <span>Portfolio</span>
           </nav>
         </div>
       </section>
@@ -85,7 +86,9 @@ const Portfolio = () => {
           <div className="portfolio-box" key={index}>
             <div className="portfolio-image">
               <img src={project.image} alt={project.title} />
-              <a href={project.link} className="visit-btn" target="_blank" rel="noopener noreferrer">Visit Site</a>
+              <NavLink to={project.link} className="visit-btn" target="_blank" rel="noopener noreferrer">
+                Visit Site
+              </NavLink>
             </div>
             <div className="portfolio-info">
               <h3 className="portfolio-title">{project.title}</h3>
@@ -95,11 +98,7 @@ const Portfolio = () => {
         ))}
         
       </div>
-      <section className="cta-section fade-in">
-        <h2>Ready to start your project?</h2>
-        <p>Let’s work together to build something amazing!</p>
-        <NavLink to="/contact" className="btn">Contact Me</NavLink>
-      </section>
+      <CTA />
       
     </section>
     

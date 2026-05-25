@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { NavLink } from "react-router-dom";
 import "./contact.css";
 
 const Contact = () => {
@@ -52,7 +53,7 @@ const Contact = () => {
         <div className="banner-content fade-in">
           <h1>Contact</h1>
           <nav className="breadcrumb">
-            <a href="/">Home</a> <span>/</span> <span>Contact</span>
+            <NavLink to="/">Home</NavLink> <span>/</span> <span>Contact</span>
           </nav>
         </div>
       </section>
@@ -62,42 +63,42 @@ const Contact = () => {
         <div className="info-box reveal">
           <h3>✉ Email</h3>
           <p>
-            <a href="mailto:murtazawebcreations@gmail.com">
+            <NavLink to="mailto:murtazawebcreations@gmail.com">
               murtazawebcreations@gmail.com
-            </a>
+            </NavLink>
           </p>
         </div>
 
         <div className="info-box reveal">
           <h3>📞 Phone</h3>
           <p>
-            <a href="tel:+923164667703">+92 316 4667703</a>
+            <NavLink to="tel:+923164667703">+92 316 4667703</NavLink>
           </p>
         </div>
 
         <div className="info-box reveal">
           <h3>📘 Facebook</h3>
           <p>
-            <a
-              href="https://www.facebook.com/murtazawebcreations"
+            <NavLink
+              to="https://www.facebook.com/murtazawebcreations"
               target="_blank"
               rel="noopener noreferrer"
             >
               facebook/murtazawebcreations
-            </a>
+            </NavLink>
           </p>
         </div>
 
         <div className="info-box reveal">
           <h3>🔗 LinkedIn</h3>
           <p>
-            <a
-              href="https://www.linkedin.com/in/murtazawebcreations/"
+            <NavLink
+              to="https://www.linkedin.com/in/murtazawebcreations/"
               target="_blank"
               rel="noopener noreferrer"
             >
               linkedin/murtazawebcreations
-            </a>
+            </NavLink>
           </p>
         </div>
       </section>

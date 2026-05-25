@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import Typed from 'typed.js';
 import Education from './Education.jsx';
 import ServicesSection from './Servicessection.jsx';
 import HomePortfolio from './HomePortfolio.jsx';
+import CTA from './CTA.jsx';
 import './Home.css';
 import AboutSection from './AboutSection.jsx';
 
@@ -39,8 +41,8 @@ const Home = () => {
           </p>
 
           <div className="hero-actions">
-            <a href="/contact" className="btn hero-btn primary">Let’s build together</a>
-            <a href="/Murtaza%27s%20CV.pdf" download="Murtaza's_CV" className="btn hero-btn secondary">Download Resume</a>
+            <NavLink to="/contact" className="btn hero-btn primary">Let’s build together</NavLink>
+            <NavLink to="/Murtaza%27s%20CV.pdf" download="Murtaza's_CV" className="btn hero-btn secondary">Download Resume</NavLink>
           </div>
 
           <div className="hero-badges">
@@ -51,21 +53,21 @@ const Home = () => {
           </div>
 
           <div className="social-media">
-            <a href="https://www.facebook.com/murtaza.webcreations" target="_blank" rel="noopener noreferrer">
+            <NavLink to="https://www.facebook.com/murtaza.webcreations" target="_blank" rel="noopener noreferrer">
               <i className="bx bxl-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/murtazawebcreations/" target="_blank" rel="noopener noreferrer">
+            </NavLink>
+            <NavLink to="https://www.instagram.com/murtazawebcreations/" target="_blank" rel="noopener noreferrer">
               <i className="bx bxl-instagram-alt"></i>
-            </a>
-            <a href="https://www.behance.net/M_Murtaza" target="_blank" rel="noopener noreferrer">
+            </NavLink>
+            <NavLink to="https://www.behance.net/M_Murtaza" target="_blank" rel="noopener noreferrer">
               <i className="bx bxl-behance"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/murtazawebcreations/" target="_blank" rel="noopener noreferrer">
+            </NavLink>
+            <NavLink to="https://www.linkedin.com/in/murtazawebcreations/" target="_blank" rel="noopener noreferrer">
               <i className="bx bxl-linkedin"></i>
-            </a>
-            <a href="https://github.com/murtazawebcreations" target="_blank" rel="noopener noreferrer">
+            </NavLink>
+            <NavLink to="https://github.com/murtazawebcreations" target="_blank" rel="noopener noreferrer">
               <i className="bx bxl-github"></i>
-            </a>
+            </NavLink>
           </div>
         </div>
 
@@ -148,12 +150,7 @@ const Home = () => {
       <Education />
       <ServicesSection />
       <HomePortfolio />
-
-      <section className="cta-section fade-in">
-        <h2>Ready to start your project?</h2>
-        <p>Let’s work together to build something amazing!</p>
-        <a href="/contact" className="btn cta-btn">Contact Me</a>
-      </section>
+      <CTA />
     </div>
   );
 };

@@ -53,7 +53,7 @@ export default function AboutSection() {
             <div className="progress-item">
               <div className="progress-label">
                 <span>WordPress</span>
-                <strong>89%</strong>
+                <strong>98%</strong>
               </div>
               <div className="progress-bar"><div className="progress-fill fill-wordpress"></div></div>
             </div>

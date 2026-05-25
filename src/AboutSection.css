@@ -424,17 +424,17 @@
 }
 
 .fill-react {
-  width: 92%;
+  width: 90%;
   background: linear-gradient(90deg, #46e3ff 0%, #0fd7ff 100%);
 }
 
 .fill-wordpress {
-  width: 89%;
+  width: 98%;
   background: linear-gradient(90deg, #9c7dff 0%, #5d9dff 100%);
 }
 
 .fill-shopify {
-  width: 86%;
+  width: 85%;
   background: linear-gradient(90deg, #6ef4b8 0%, #2fb596 100%);
 }
 

@@ -1,0 +1,640 @@
+.cta-section {
+  width: 100%;
+  position: relative;
+  padding: 100px 0;
+  /* Dark, highlighted background */
+  background: linear-gradient(135deg, #041018 0%, #081623 60%),
+    radial-gradient(circle at 20% 50%, rgba(79, 223, 255, 0.06), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(123, 241, 255, 0.03), transparent 50%);
+  overflow: hidden;
+  border-top: 2px solid rgba(79, 223, 255, 0.12);
+}
+
+/* Force centering at the section level to avoid layout shifts from parent containers */
+section.cta-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(79, 223, 255, 0.03), transparent);
+  pointer-events: none;
+}
+
+/* High-specificity overrides to prevent other files (e.g. About.css) from
+   accidentally overriding CTA styles. These rules target the `section` element
+   plus the class to increase specificity and use !important where necessary. */
+section.cta-section {
+  width: 100% !important;
+  padding: 100px 0 !important;
+  background: linear-gradient(135deg, #041018 0%, #081623 60%) !important;
+  border-top: 2px solid rgba(79, 223, 255, 0.12) !important;
+  color: #eef4ff !important;
+  text-align: left !important;
+}
+
+section .cta-container {
+  max-width: 1285px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+  display: grid !important;
+  grid-template-columns: 560px minmax(340px, 1fr) !important;
+  gap: 60px !important;
+  align-items: center !important;
+}
+
+section .cta-3d-model {
+  justify-content: center !important;
+}
+
+section .cta-content {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+section .cta-eyebrow {
+  font-size: 0.75rem !important;
+  padding: 7px 14px !important;
+  background: rgba(79, 223, 255, 0.08) !important;
+  border: 1px solid rgba(79, 223, 255, 0.18) !important;
+  color: #7feeff !important;
+}
+
+section .cta-heading {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem) !important;
+  font-weight: 800 !important;
+  color: #eef4ff !important;
+}
+
+section .cta-btn {
+  border-radius: 12px !important;
+}
+
+.cta-container {
+  /* center content and constrain width so CTA is visually balanced */
+  max-width: 1200px;
+  width: min(100%, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 560px minmax(340px, 1fr);
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .cta-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.cta-3d-model {
+  position: relative;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 24px;
+  opacity: 0;
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.cta-3d-model::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(79, 223, 255, 0.15), transparent 55%);
+  pointer-events: none;
+}
+
+
+.cta-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 0 30px rgba(79, 223, 255, 0.3));
+}
+
+.cta-model-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(79, 223, 255, 0.1), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+  text-align: left;
+  opacity: 0;
+  animation: slideInRight 0.8s ease forwards 0.2s;
+}
+
+/* allow children to shrink inside grid columns (prevents overflow pushing layout right) */
+.cta-content, .cta-content * {
+  min-width: 0;
+}
+
+
+.cta-eyebrow {
+  display: inline-block;
+  width: fit-content;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(79, 223, 255, 0.08);
+  border: 1px solid rgba(79, 223, 255, 0.18);
+  color: #7feeff;
+  font-size: 0.75rem; /* reduced size */
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+.cta-heading {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  color: #eef4ff;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.cta-heading span {
+  display: block;
+  background: linear-gradient(90deg, #4fdfff, #7bf1ff, #6ff7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(238, 244, 255, 0.75);
+  margin: 0;
+  max-width: 550px;
+  overflow-wrap: break-word;
+}
+
+.cta-features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.cta-feature {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(79, 223, 255, 0.06);
+  border: 1px solid rgba(79, 223, 255, 0.12);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.cta-feature:hover {
+  background: rgba(79, 223, 255, 0.1);
+  border-color: rgba(79, 223, 255, 0.25);
+  transform: translateX(8px);
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(79, 223, 255, 0.2);
+  color: #4fdfff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.feature-text h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #eef4ff;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.01em;
+}
+
+.feature-text p {
+  font-size: 0.9rem;
+  color: rgba(238, 244, 255, 0.65);
+  margin: 0;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.cta-btn {
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.cta-btn.primary {
+  color: #071017;
+  background: linear-gradient(135deg, #33e7ff 0%, #4d7ffd 100%);
+  box-shadow: 0 18px 40px rgba(51, 231, 255, 0.22);
+  font-size: 0.9rem;
+  font-weight: 500;
+  
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(79, 223, 255, 0.4);
+  font-weight: 500;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+  .cta-section {
+    padding: 80px 0;
+  }
+
+  .cta-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 6%;
+  }
+
+  .cta-3d-model {
+    height: 520px;
+    order: 2;
+  }
+
+  .cta-content {
+    order: 1;
+  }
+
+  .cta-heading {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+  }
+
+  .cta-description {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    gap: 12px;
+  }
+
+  .cta-btn {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 70px 0;
+  }
+
+  .cta-container {
+    padding: 0 5%;
+  }
+
+  .cta-eyebrow {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .cta-heading {
+    font-size: clamp(1.75rem, 3vw, 2.2rem);
+  }
+
+  .cta-heading span {
+    margin-top: 8px;
+  }
+
+  .cta-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .cta-3d-model {
+    height: 420px;
+  }
+
+  .cta-features {
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .cta-feature {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .feature-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .feature-text h3 {
+    font-size: 0.95rem;
+  }
+
+  .feature-text p {
+    font-size: 0.85rem;
+  }
+
+  .cta-buttons {
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .cta-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    flex: 1;
+    min-width: 140px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 60px 0;
+    border-top: none;
+  }
+
+  .cta-container {
+    padding: 0 4%;
+  }
+
+  .cta-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    padding: 7px 12px;
+  }
+
+  .cta-heading {
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+
+  .cta-heading span {
+    margin-top: 6px;
+  }
+
+  .cta-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .cta-3d-model {
+    height: 360px;
+    margin-bottom: 20px;
+    min-height: 360px;
+  }
+
+  .cta-features {
+    gap: 12px;
+    margin: 12px 0;
+  }
+
+  .cta-feature {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .feature-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+  }
+
+  .feature-text h3 {
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+  }
+
+  .feature-text p {
+    font-size: 0.8rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .cta-btn {
+    padding: 14px 20px;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .cta-btn.primary {
+    order: 1;
+  }
+
+  .cta-btn.secondary {
+    order: 2;
+  }
+}
+
+/* Ensure responsive overrides take precedence over other files (About.css) */
+@media (max-width: 1024px) {
+  section.cta-section {
+    padding: 80px 0 !important;
+  }
+
+  section .cta-container {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding: 0 6% !important;
+  }
+
+  section .cta-3d-model {
+    order: 2 !important;
+    height: 520px !important;
+    justify-content: center !important;
+  }
+
+  section .cta-content {
+    order: 1 !important;
+  }
+
+  section .cta-heading {
+    font-size: clamp(2rem, 3.5vw, 2.8rem) !important;
+  }
+
+  section .cta-description {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  section.cta-section {
+    padding: 70px 0 !important;
+  }
+
+  section .cta-container {
+    grid-template-columns: 1fr !important;
+    padding: 0 5% !important;
+    gap: 24px !important;
+  }
+
+  section .cta-3d-model {
+    order: 2 !important;
+    height: 420px !important;
+  }
+
+  section .cta-canvas {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 250px !important;
+  }
+
+  section .cta-content {
+    order: 1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section.cta-section {
+    padding: 60px 0 !important;
+  }
+
+  section .cta-container {
+    grid-template-columns: 1fr !important;
+    padding: 0 4% !important;
+    gap: 16px !important;
+  }
+
+  section .cta-3d-model {
+    order: 2 !important;
+    height: 360px !important;
+    margin-bottom: 12px !important;
+    min-height: 360px !important;
+  }
+
+  section .cta-canvas {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 320px !important;
+  }
+
+  section .cta-content {
+    order: 1 !important;
+  }
+}
+
+/* Make sure grid items can shrink to avoid pushing content right */
+.cta-container > * {
+  min-width: 0;
+}
+
+/* Final high-specificity override to beat .cta-section rules in Home.css
+   Home.css applies `margin: 0 7%` and `border-radius`, which inset the CTA.
+   Use a selector with greater specificity and !important to force full-width
+   centered layout and remove the inset border-radius. */
+html body .home-page section.cta-section {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 100px 0 !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+  background: linear-gradient(135deg, #041018 0%, #081623 60%) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+html body .home-page section.cta-section .cta-container {
+  max-width: 1200px !important;
+  width: min(100%, 1200px) !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}

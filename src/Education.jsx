@@ -13,7 +13,7 @@ export default function Education() {
         </div>
       </h2>
 
-      <div className="resume-grid">
+        <div className="resume-grid">
         {/* Experiences */}
         <div className="resume-column">
           <h3 className="section-title">Experiences</h3>
@@ -50,19 +50,19 @@ export default function Education() {
             years: "2010 - 2020",
             title: "Matriculation in Computer Science",
             institution: "Allied School",
-            description: `Matriculation in Computer Science – Gained a strong foundation in computer fundamentals, problem-solving, and logical thinking.`
+            description: `Gained a strong foundation in computer fundamentals, problem-solving, and logical thinking.`
           }, {
             id: 4,
             years: "2020 - 2022",
             title: "Intermediate in Computer Science (ICS)",
             institution: "Aspire College",
-            description: `Intermediate in Computer Science (ICS) – Studied programming, mathematics, and computer applications, enhancing analytical and technical skills.`
+            description: `Studied programming, mathematics, and computer applications, enhancing analytical and technical skills.`
           }, {
             id: 5,
             years: "2022 - 2026",
             title: "BS Computer Science",
             institution: "Lahore Leads University",
-            description: `BS Computer Science (Completed) – Graduated with comprehensive expertise in algorithms, web development, software engineering, databases, and modern development practices.`
+            description: `Graduated with comprehensive expertise in algorithms, web development, software engineering, databases, and modern development practices.`
           }].map((item) => (
             <div key={item.id} className="resume-item">
               <div className="badge">{item.id}</div>
@@ -73,7 +73,7 @@ export default function Education() {
             </div>
           ))}
         </div>
-      </div>
+        </div>
     </div>
   
   );

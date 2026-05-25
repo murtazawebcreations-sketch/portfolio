@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { FaWordpress, FaReact, FaShopify, FaLaptopCode, FaRocket, FaDraftingCompass, FaRedoAlt, FaLayerGroup} from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
 import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
-import { NavLink } from 'react-router-dom';
 import './Services.css';
+import CTA from './CTA.jsx';
 
 const Services = () => {
   return (
@@ -14,7 +15,7 @@ const Services = () => {
         <div className="banner-content fade-in">
           <h1>Services</h1>
           <nav className="breadcrumb">
-            <a href="/">Home</a> <span>/</span> <span>Services</span>
+            <NavLink to="/">Home</NavLink> <span>/</span> <span>Services</span>
           </nav>
         </div>
       </section>
@@ -117,11 +118,7 @@ const Services = () => {
       </div>
 
        {/* Call to Action Section */}
-      <section className="cta-section fade-in">
-        <h2>Ready to start your project?</h2>
-        <p>Let’s work together to build something amazing!</p>
-        <NavLink to="/contact" className="btn">Contact Me</NavLink>
-      </section>
+      <CTA />
     </div>
   );
 };
