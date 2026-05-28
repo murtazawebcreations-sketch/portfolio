@@ -1,4 +1,4 @@
-.cta-section {
+.cta-widget-section {
   width: 100%;
   position: relative;
   padding: 100px 0;
@@ -10,14 +10,30 @@
   border-top: 2px solid rgba(79, 223, 255, 0.12);
 }
 
+/* Unique CTA widget wrapper to avoid conflicts with page-level .cta-widget-section styles */
+.cta-widget-section {
+  overflow-x: hidden;
+}
+
+.cta-widget-section .cta-container {
+  box-sizing: border-box;
+  width: min(100%, 1200px) !important;
+  max-width: 1200px !important;
+  padding: 0 32px !important;
+}
+
+.cta-widget-section .cta-container > * {
+  min-width: 0;
+}
+
 /* Force centering at the section level to avoid layout shifts from parent containers */
-section.cta-section {
+section.cta-widget-section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cta-section::before {
+.cta-widget-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -31,7 +47,7 @@ section.cta-section {
 /* High-specificity overrides to prevent other files (e.g. About.css) from
    accidentally overriding CTA styles. These rules target the `section` element
    plus the class to increase specificity and use !important where necessary. */
-section.cta-section {
+section.cta-widget-section {
   width: 100% !important;
   padding: 100px 0 !important;
   background: linear-gradient(135deg, #041018 0%, #081623 60%) !important;
@@ -80,6 +96,7 @@ section .cta-btn {
 
 .cta-container {
   /* center content and constrain width so CTA is visually balanced */
+  box-sizing: border-box;
   max-width: 1200px;
   width: min(100%, 1200px);
   margin-left: auto;
@@ -332,7 +349,7 @@ section .cta-btn {
 
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
-  .cta-section {
+  .cta-widget-section {
     padding: 80px 0;
   }
 
@@ -352,7 +369,7 @@ section .cta-btn {
   }
 
   .cta-heading {
-    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
   }
 
   .cta-description {
@@ -371,7 +388,7 @@ section .cta-btn {
 
 /* Tablet (768px and below) */
 @media (max-width: 768px) {
-  .cta-section {
+  .cta-widget-section {
     padding: 70px 0;
   }
 
@@ -385,7 +402,7 @@ section .cta-btn {
   }
 
   .cta-heading {
-    font-size: clamp(1.75rem, 3vw, 2.2rem);
+    font-size: clamp(1.6rem, 2.8vw, 2rem);
   }
 
   .cta-heading span {
@@ -439,7 +456,7 @@ section .cta-btn {
 
 /* Mobile (480px and below) */
 @media (max-width: 480px) {
-  .cta-section {
+  .cta-widget-section {
     padding: 60px 0;
     border-top: none;
   }
@@ -455,7 +472,7 @@ section .cta-btn {
   }
 
   .cta-heading {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.15;
   }
 
@@ -523,7 +540,7 @@ section .cta-btn {
 
 /* Ensure responsive overrides take precedence over other files (About.css) */
 @media (max-width: 1024px) {
-  section.cta-section {
+  section.cta-widget-section {
     padding: 80px 0 !important;
   }
 
@@ -553,7 +570,7 @@ section .cta-btn {
 }
 
 @media (max-width: 768px) {
-  section.cta-section {
+  section.cta-widget-section {
     padding: 70px 0 !important;
   }
 
@@ -581,7 +598,7 @@ section .cta-btn {
 }
 
 @media (max-width: 480px) {
-  section.cta-section {
+  section.cta-widget-section {
     padding: 60px 0 !important;
   }
 
@@ -615,11 +632,11 @@ section .cta-btn {
   min-width: 0;
 }
 
-/* Final high-specificity override to beat .cta-section rules in Home.css
+/* Final high-specificity override to beat .cta-widget-section rules in Home.css
    Home.css applies `margin: 0 7%` and `border-radius`, which inset the CTA.
    Use a selector with greater specificity and !important to force full-width
    centered layout and remove the inset border-radius. */
-html body .home-page section.cta-section {
+html body .home-page section.cta-widget-section {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -632,7 +649,7 @@ html body .home-page section.cta-section {
   box-shadow: none !important;
 }
 
-html body .home-page section.cta-section .cta-container {
+html body .home-page section.cta-widget-section .cta-container {
   max-width: 1200px !important;
   width: min(100%, 1200px) !important;
   margin: 0 auto !important;

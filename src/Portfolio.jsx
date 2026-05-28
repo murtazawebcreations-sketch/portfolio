@@ -1,23 +1,19 @@
 import React from 'react';
+import './HomePortfolio.css';
 import './Portfolio.css';
 import { NavLink } from 'react-router-dom';
 import CTA from './CTA.jsx';
 
 const projects = [
   {
-    title: 'Go For Barber',
-    image: '/portfolio/go-for-barber.png',
-    link: 'https://goforbarber.ca/'
+    title: 'Boxer Athletics',
+    image: '/portfolio/boxer-athletics.png',
+    link: 'https://www.boxerathletics.com/'
   },
   {
     title: 'Silver Oak College',
     image: '/portfolio/silver-oak-college.png',
     link: 'https://silveroakcollege.ca/'
-  },
-  {
-    title: 'Boxer Athletics',
-    image: '/portfolio/boxer-athletics.png',
-    link: 'https://www.boxerathletics.com/'
   },
   {
     title: 'Pro Canada Construction',
@@ -29,7 +25,7 @@ const projects = [
     image: '/portfolio/vanguard.png',
     link: 'https://vanguardbuilders.ca/'
   },
-  {
+   {
     title: 'Kashmir Grill',
     image: '/portfolio/kashmir-grill.png',
     link: 'https://kashmirgrill.ca/'
@@ -43,6 +39,11 @@ const projects = [
     title: 'Grow More Workforce',
     image: '/portfolio/grow-more-work.png',
     link: 'https://growmoreworkforce.com/'
+  },
+  {
+    title: 'Go For Barber',
+    image: '/portfolio/go-for-barber.png',
+    link: 'https://goforbarber.ca/'
   },
   {
     title: 'Home & Haven',
@@ -68,7 +69,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section className="main-portfolio-section">
+    <div className="portfolio-page">
       <section className="portfolio-banner">
         <div className="banner-content fade-in">
           <h1>Portfolio</h1>
@@ -77,31 +78,34 @@ const Portfolio = () => {
           </nav>
         </div>
       </section>
-      <div className="portfolio-intro">
-        <p className="portfolio-tagline">Showcasing Excellence Through Every Pixel</p>
-        <h2 className="portfolio-main-heading">Featured Projects</h2>
-      </div>
-      <div className="portfolio-gallery">
-        {projects.map((project, index) => (
-          <div className="portfolio-box" key={index}>
-            <div className="portfolio-image">
-              <img src={project.image} alt={project.title} />
-              <NavLink to={project.link} className="visit-btn" target="_blank" rel="noopener noreferrer">
-                Visit Site
-              </NavLink>
-            </div>
-            <div className="portfolio-info">
-              <h3 className="portfolio-title">{project.title}</h3>
-            </div>
+
+      <section className="home-portfolio-section portfolio-page-portfolio">
+        <div className="home-portfolio-container">
+          <span className="portfolio-subheading">Bold portfolios, polished results</span>
+          <h1 className="portfolio-heading">
+            Explore a curated gallery of sites built with <span>clarity</span> and strong visual impact.
+          </h1>
+
+          <div className="home-portfolio-grid">
+            {projects.map((project, index) => (
+              <div className="home-portfolio-item" key={index}>
+                <div className="portfolio-img-wrapper">
+                  <img src={encodeURI(project.image)} alt={project.title} />
+                  <a className="btn" href={project.link} target="_blank" rel="noopener noreferrer">
+                    Visit Site
+                  </a>
+                </div>
+                <div className="portfolio-info">
+                  <h3>{project.title}</h3>
+                </div>
+              </div>
+            ))}
           </div>
-          
-        ))}
-        
-      </div>
+        </div>
+      </section>
+
       <CTA />
-      
-    </section>
-    
+    </div>
   );
 };
 

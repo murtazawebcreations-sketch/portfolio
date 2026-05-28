@@ -52,7 +52,7 @@
   background: rgba(79, 223, 255, 0.12);
   border: 1px solid rgba(79, 223, 255, 0.22);
   color: #4fdfff;
-  font-size: 0.95rem;
+  font-size: 0.80rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
 }
 
 .portfolio-heading {
-  font-size: clamp(1.9rem, 3vw, 3rem);
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
   font-weight: 800;
   color: #eef4ff;
   margin: 0 auto 20px auto;
@@ -272,13 +272,13 @@
   }
 
   .portfolio-subheading {
-    font-size: 0.85rem;
+    font-size: 0.60rem;
     padding: 8px 14px;
     margin-bottom: 12px;
   }
 
   .portfolio-heading {
-    font-size: clamp(1.75rem, 3vw, 2.2rem);
+    font-size: clamp(1.55rem, 2.5vw, 2rem);
     margin-bottom: 14px;
     max-width: 100%;
   }
@@ -321,14 +321,14 @@
   }
 
   .portfolio-subheading {
-    font-size: 0.8rem;
+    font-size: 0.60rem;
     letter-spacing: 0.1em;
-    padding: 7px 12px;
+    padding: 6px 10px;
   }
 
   .portfolio-heading {
-    font-size: 1.6rem;
-    line-height: 1.15;
+    font-size: 1.2rem;
+    line-height: 1.25;
   }
 
   .home-portfolio-grid {

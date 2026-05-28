@@ -26,7 +26,7 @@ export default function Education() {
             description: `Working as a WordPress & Custom Developer at Seller Pro since 2022, I have developed and optimized 200+ websites, including WooCommerce and eCommerce platforms. My role involves creating responsive, high-performance, and user-friendly websites, ensuring seamless functionality and modern design.`
           }, {
             id: 2,
-            years: "2021 - Present",
+            years: "2022 - Present",
             title: "Independent Web Developer",
             company: "Self-Employed (Freelance)",
             description: `Building and managing personal web development projects, I specialize in creating responsive, modern, and high-performance websites using HTML, CSS, JavaScript, ReactJS, Bootstrap, and Tailwind CSS. I have independently designed and developed multiple projects, focusing on UI/UX, functionality, and seamless user experiences.`

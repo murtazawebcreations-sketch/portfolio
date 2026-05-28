@@ -1,3 +1,8 @@
+.portfolio-page {
+  background: #0b101a;
+  color: #fff;
+}
+
 .portfolio-banner {
   background: linear-gradient(120deg, #1e293b 60%, #64748b 100%);
   color: #fff;
@@ -5,6 +10,7 @@
   text-align: center;
 }
 
+.portfolio-banner h1,
 .portfolio-content h1 {
   font-size: 3rem;
   margin-bottom: 10px;

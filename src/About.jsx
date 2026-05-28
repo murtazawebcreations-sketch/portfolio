@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css'
+import './About.css';
 import { NavLink } from 'react-router-dom';
 import CTA from './CTA.jsx';
 
@@ -42,72 +42,133 @@ const testimonials = [
   }
 ];
 
+const skillCards = [
+  {
+    title: 'Brand-first Design',
+    description: 'Modern visual systems, responsive layouts, and polished UI that feel premium.',
+    icon: '✨'
+  },
+  {
+    title: 'WordPress & Shopify',
+    description: 'Custom stores, landing pages, and CMS-driven sites optimized for growth.',
+    icon: '🛒'
+  },
+  {
+    title: 'Performance Focus',
+    description: 'Fast loading experiences and clean code for every device and screen size.',
+    icon: '⚡'
+  },
+];
 
 const About = () => {
   return (
     <div className="about-page">
-      {/* Banner Section */}
       <section className="about-banner">
-        <div className="banner-content fade-in">
-          <h1>About</h1>
+        <div className="banner-content">
+          <div>
+            <span className="banner-eyebrow">About</span>
+            <h1>Designing digital experiences with style, speed, and strategy.</h1>          </div>
           <nav className="breadcrumb">
             <NavLink to="/">Home</NavLink> <span>/</span> <span>About</span>
           </nav>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="about-main-section slide-up">
-        <div className="about-main-content">
-          <div className="about-text">
-            <h2>Who I Am</h2>
-            <p>
-              I’m Muhammad Murtaza, a passionate web developer with expertise in WordPress, Shopify, and React. I love building beautiful, functional, and responsive websites that help businesses grow and stand out online.
-            </p>
-            <p>
-              With over 2 years of experience and 200+ projects, I focus on delivering quality, performance, and great user experiences.
-            </p>
+      <section className="about-hero">
+        <div className="hero-copy">
+          <span className="eyebrow">Creative Web Development</span>
+          <h2>Building premium websites that look stunning and work flawlessly.</h2>
+          <p>
+            I specialize in WordPress, Shopify, and React development with a focus on polished visuals, strong performance, and seamless user experiences. Every project is crafted to help businesses convert more visitors and grow with confidence.
+          </p>
+          <div className="hero-highlights">
+            <div className="highlight-pill">200+ projects delivered</div>
+            <div className="highlight-pill">Mobile-first & responsive</div>
+            <div className="highlight-pill">Fast launch timelines</div>
           </div>
-          <div className="about-image">
-            <img src="Murtaza.png" alt="Murtaza" />
+        </div>
+
+        <div className="hero-visual">
+          <div className="hero-card">
+            <div className="hero-card-glow"></div>
+            <div className="hero-card-panel">
+              <div className="panel-title">Design + Code</div>
+              <p>Interactive layouts with refined 3D depth. Built to impress and convert.</p>
+              <div className="panel-stats">
+                <div>
+                  <strong>4.9/5</strong>
+                  <span>Client Rating</span>
+                </div>
+                <div>
+                  <strong>98%</strong>
+                  <span>Client Success</span>
+                </div>
+              </div>
+            </div>
+            <div className="hero-image-frame">
+              <img src="Murtaza.png" alt="Muhammad Murtaza" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="mission-vision-section fade-in">
-        <div className="mission-vision-container">
-          <div className="mission-card">
-            <h3> Mission</h3>
-            <p>
-              To empower businesses and individuals with innovative, user-friendly, and visually stunning web solutions that drive success and growth.
-            </p>
-          </div>
-          <div className="vision-card">
-            <h3> Vision</h3>
-            <p>
-              To be recognized as a leading web developer, known for creativity, reliability, and exceptional results in the digital world.
-            </p>
-          </div>
+      <section className="about-grid-section">
+        <div className="about-grid-card glass-card">
+          <span className="eyebrow">What I offer</span>
+          <h3>Thoughtful websites with meaningful motion and refined structure.</h3>
+          <p>
+            My process combines creative direction, strong UX, and responsive implementation so every website feels premium and performs well across devices.
+          </p>
+        </div>
+        <div className="about-grid-card dark-card">
+          <span className="eyebrow">How I work</span>
+          <h3>Collaborative, transparent, and focused on results.</h3>
+          <ul>
+            <li>Discovery and visual direction</li>
+            <li>Fast prototypes and clear feedback cycles</li>
+            <li>Clean deployment and ongoing support</li>
+          </ul>
+        </div>
+        <div className="about-grid-card glass-card">
+          <span className="eyebrow">Why choose me</span>
+          <h3>Reliable development with a polished digital finish.</h3>
+          <p>
+            I deliver modern, responsive sites that feel premium, load quickly, and capture the attention of your audience.
+          </p>
         </div>
       </section>
 
-     {/* Testimonials Section */}
-<section className="testimonials-section slide-up">
-  <h2 className="testimonials-title">Testimonials</h2>
-  <div className="testimonials-carousel-wrapper">
-    <div className="testimonials-carousel">
-      {[...testimonials, ...testimonials].map((t, idx) => (
-        <div className="testimonial-card fade-in" key={idx}>
-          <p className="testimonial-text">"{t.text}"</p>
-          <span className="testimonial-name">- {t.name}</span>
+      <section className="skills-section">
+        <div className="section-heading">
+          <span className="eyebrow">Specialties</span>
+          <h2>Core strengths for modern brands.</h2>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+        <div className="skills-grid">
+          {skillCards.map((skill, index) => (
+            <div className="skill-card" key={index}>
+              <div className="skill-icon">{skill.icon}</div>
+              <h4>{skill.title}</h4>
+              <p>{skill.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {/* Call to Action Section */}
+      <section className="testimonials-section">
+        <div className="testimonials-header">
+          <span className="eyebrow">Testimonials</span>
+          <h2>Clients share what makes the experience memorable.</h2>
+        </div>
+        <div className="testimonial-grid">
+          {testimonials.map((t, idx) => (
+            <article className="testimonial-card" key={idx}>
+              <p>“{t.text}”</p>
+              <span>- {t.name}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <CTA />
     </div>
   );

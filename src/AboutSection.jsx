@@ -18,7 +18,7 @@ export default function AboutSection() {
           <div className="visual-card">
             <AboutImage />
             <div className="badge-card badge-highlight">
-              <span>03+</span>
+              <span>02+</span>
               Years Experience
             </div>
             <div className="badge-card badge-secondary">

@@ -20,7 +20,11 @@ const Services = () => {
         </div>
       </section>
 
-      <h1 className="services-title">Innovative Solutions for Your Growth</h1>
+      <div className="services-header-copy">
+        <p className="services-subheading">What I Offer</p>
+        <h1 className="services-title">Innovative Solutions for Your Growth</h1>
+        <p className="services-tagline">Strategic service packages designed to boost conversions, speed, and brand impact.</p>
+      </div>
       <div className="services-container">
         <div className="service-card">
           <div className="icon">

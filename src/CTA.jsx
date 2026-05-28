@@ -162,7 +162,7 @@ const CTA = () => {
   }, []);
 
   return (
-    <section className="cta-section">
+    <section className="cta-widget-section">
       <div className="cta-container">
         <div className="cta-3d-model">
           <canvas ref={canvasRef} className="cta-canvas"></canvas>

@@ -31,9 +31,9 @@ const homePortfolioItems = [
     link: 'https://kashmirgrill.ca/'
   },
   {
-    title: 'Go For Barber',
-    image: '/portfolio/go-for-barber.png',
-    link: 'https://goforbarber.ca/'
+    title: 'Grow More Workforce',
+    image: '/portfolio/grow-more-work.png',
+    link: 'https://growmoreworkforce.com/'
   }
 ];
 
